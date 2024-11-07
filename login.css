@@ -1,0 +1,193 @@
+
+/* General Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #ede8f5;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+h1, h3 {
+    font-family: 'Arial', sans-serif;
+    color: #3d52a0;
+    text-align: center;
+}
+
+/* Login Page */
+#login-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #3d52a0;
+    color: white;
+}
+
+#login-section input {
+    padding: 10px;
+    margin: 10px;
+    width: 250px;
+    border: 2px solid #3d52a0;
+    border-radius: 5px;
+    outline: none;
+    font-size: 16px;
+}
+
+#login-section button {
+    padding: 10px 20px;
+    background-color: #7091e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#login-section button:hover {
+    background-color: #8697c4;
+}
+
+/* User Dashboard */
+#user-dashboard {
+    background-color: #fff;
+    padding: 20px;
+    margin: 30px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#user-dashboard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#user-dashboard table th, #user-dashboard table td {
+    padding: 10px;
+    text-align: left;
+}
+
+#user-dashboard table th {
+    background-color: #3d52a0;
+    color: white;
+    font-size: 16px;
+}
+
+#user-dashboard table td {
+    background-color: #f9f9f9;
+    font-size: 14px;
+}
+
+#user-dashboard button {
+    padding: 10px 20px;
+    background-color: #7091e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#user-dashboard button:hover {
+    background-color: #8697c4;
+}
+
+#home-button {
+    margin-top: 20px;
+    background-color: #3d52a0;
+    font-size: 16px;
+}
+
+/* Admin Dashboard */
+#admin-dashboard {
+    padding: 20px;
+    margin: 30px auto;
+    width: 80%;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+#admin-dashboard select {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid #3d52a0;
+    border-radius: 5px;
+    width: 200px;
+    margin: 10px 0;
+}
+
+#admin-dashboard table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#admin-dashboard table th, #admin-dashboard table td {
+    padding: 10px;
+    text-align: left;
+}
+
+#admin-dashboard table th {
+    background-color: #3d52a0;
+    color: white;
+    font-size: 16px;
+}
+
+#admin-dashboard table td {
+    background-color: #f9f9f9;
+    font-size: 14px;
+}
+
+#admin-dashboard button {
+    padding: 10px 20px;
+    background-color: #7091e6;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+#admin-dashboard button:hover {
+    background-color: #8697c4;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    body {
+        padding: 20px;
+    }
+
+    #login-section input {
+        width: 80%;
+    }
+
+    #user-dashboard, #admin-dashboard {
+        width: 90%;
+    }
+
+    #user-dashboard table, #admin-dashboard table {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    #login-section input {
+        width: 100%;
+    }
+
+    #user-dashboard, #admin-dashboard {
+        width: 100%;
+    }
+
+    #user-dashboard table, #admin-dashboard table {
+        font-size: 12px;
+    }
+
+    #home-button, #user-dashboard button {
+        width: 100%;
+        margin-top: 10px;
+    }
+}

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management</title>
+  <link rel="stylesheet" href="login.css">
+</head>
+<body>
+  <!-- Login Section -->
+  <div id="login-section">
+    <h3>Login</h3>
+    <input type="text" id="username" placeholder="Username">
+    <input type="password" id="password" placeholder="Password">
+    <button onclick="login()">Login</button>
+  </div>
+
+ <!-- User Dashboard Section -->
+<div id="user-dashboard" style="display:none;">
+    <h3>Your Tasks</h3>
+    <table>
+      <thead>
+        <tr>
+          <th>Task</th>
+          <th>Complete</th>
+        </tr>
+      </thead>
+      <tbody id="taskList"></tbody>
+    </table>
+    <button onclick="submitTasks()">Submit</button>
+    <button id="home-button" onclick="goHome()" style="display:none;">Go to Home</button>
+  </div>
+  
+<div id="admin-dashboard" style="display: none;">
+    <h2>Admin Dashboard</h2>
+
+    <div id="user-history">
+        <h3>User Task Histories (Last 40 Days)</h3>
+
+        <!-- Table for each user -->
+        <div>
+            <h4>User 30362040</h4>
+            <table id="table-30362040" border="1">
+                <tr>
+                    <th>Date</th>
+                    <th>Completed Tasks</th>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h4>User 30362041</h4>
+            <table id="table-30362041" border="1">
+                <tr>
+                    <th>Date</th>
+                    <th>Completed Tasks</th>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h4>User 30362042</h4>
+            <table id="table-30362042" border="1">
+                <tr>
+                    <th>Date</th>
+                    <th>Completed Tasks</th>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h4>User 30362043</h4>
+            <table id="table-30362043" border="1">
+                <tr>
+                    <th>Date</th>
+                    <th>Completed Tasks</th>
+                </tr>
+            </table>
+        </div>
+
+        <div>
+            <h4>User 20323313</h4>
+            <table id="table-20323313" border="1">
+                <tr>
+                    <th>Date</th>
+                    <th>Completed Tasks</th>
+                </tr>
+            </table>
+        </div>
+    </div>
+</div>
+
+
+  
+ 
+  
+  <script src="script.js"></script>
+</body>
+</html>
