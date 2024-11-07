@@ -134,14 +134,13 @@ function exportToExcel(userId) {
 }
 
 // Reset task checkbox and task status
-function resetTasks() {
-    const taskList = document.getElementById("taskList");
-    const checkboxes = taskList.querySelectorAll("input[type='checkbox']");
-    checkboxes.forEach(checkbox => {
-        checkbox.disabled = false;  // Enable the checkbox to allow re-ticking
-        checkbox.checked = false;  // Uncheck all checkboxes
-    });
-    alert("Tasks have been reset for the day!");
+function resetTasksForToday(userId) {
+    const today = new Date().toLocaleDateString();
+    userTaskHistory[userId] = userTaskHistory[userId].filter(entry => entry.date !== today); // Remove only today's tasks
+    localStorage.setItem("userTaskHistory", JSON.stringify(userTaskHistory));
+
+    alert(`Today's tasks have been reset for user ${userId}`);
+    loadAdminData(); // Refresh admin view to show the reset status
 }
 
 // Logout function for admin
