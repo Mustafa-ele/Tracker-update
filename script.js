@@ -1,4 +1,3 @@
-
 let users = {
     "30362040": { password: "yahusain", tasks: [], completedTasks: [] },
     "30362041": { password: "yahusain", tasks: [], completedTasks: [] },
@@ -72,6 +71,7 @@ function submitTasks() {
         const checkbox = document.getElementById(`task-${index}`);
         if (checkbox.checked) {
             completedTasks.push(task.task);
+            checkbox.disabled = true;  // Disable the checkbox for the completed task
         }
     });
 
@@ -131,6 +131,17 @@ function exportToExcel(userId) {
     document.body.appendChild(link);
     link.click();
     document.body.removeChild(link);
+}
+
+// Reset task checkbox and task status
+function resetTasks() {
+    const taskList = document.getElementById("taskList");
+    const checkboxes = taskList.querySelectorAll("input[type='checkbox']");
+    checkboxes.forEach(checkbox => {
+        checkbox.disabled = false;  // Enable the checkbox to allow re-ticking
+        checkbox.checked = false;  // Uncheck all checkboxes
+    });
+    alert("Tasks have been reset for the day!");
 }
 
 // Logout function for admin
