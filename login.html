@@ -34,6 +34,19 @@
 <div id="admin-dashboard" style="display: none;">
     <h2>Admin Dashboard</h2>
 
+    <!-- User Selection and Reset Button -->
+    <div>
+        <label for="user-select">Select User to Reset Today's Tasks:</label>
+        <select id="user-select">
+            <option value="20323313">20323313</option>
+            <option value="30362040">30362040</option>
+            <option value="30362041">30362041</option>
+            <option value="30362042">30362042</option>
+            <option value="30362043">30362043</option>
+        </select>
+        <button onclick="resetTasksForToday(document.getElementById('user-select').value)">Reset Today's Tasks</button>
+    </div>
+
     <div id="user-history">
         <h3>User Task Histories (Last 40 Days)</h3>
 
@@ -89,6 +102,7 @@
         </div>
     </div>
 </div>
+
 
 
   
